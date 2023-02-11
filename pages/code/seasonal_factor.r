@@ -8,12 +8,14 @@ df <- read_csv("data/seasonal_data.csv")
 
 seasonal_factor <- df %>% mutate(value_sa = log(value_sa)) %>% 
   ggplot() + 
-  geom_line(aes(Date, seasonal_factor)) +
+  geom_line(aes(Date, seasonal_factor), color = "steelblue") +
   #geom_line(aes(Date, value)) +
   # geom_line(aes(Date, value_sa)) +
-  facet_wrap(~ticker, scales = "free_y") + theme_bw()+ 
+  # facet_wrap(~ticker, scales = "free_y") + #theme_bw()+ 
+  ggthemes::theme_economist() + 
+  ggthemes::scale_color_economist() +
   labs(
-    x = "Date",
+    x = "",
     y = "",
     colour = "Fruit",
     title = "Seasonal factor"

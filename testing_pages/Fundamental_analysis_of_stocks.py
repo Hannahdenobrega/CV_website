@@ -8,6 +8,11 @@ import plotly.express as px
 # title of your page
 st.title("Stock dashboard")
 
+st.caption("Author: Hannah de Nobrega")
+st.caption("Date: 20 Jan 2023")
+
+
+
 # create a sidebar where people can type the stock/ticker they are looking for
 ticker = st.sidebar.text_input('Ticker')
 start_date = st.sidebar.date_input('Start date')

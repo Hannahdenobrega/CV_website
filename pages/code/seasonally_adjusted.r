@@ -5,14 +5,16 @@ setwd('/Users/hannahdenobrega/Documents/FoP_bin/pages')
 
 df <- read_csv("data/seasonal_data.csv")
 
-sa <- df %>% 
+plot_seasonally_adjusted <- df %>% 
   ggplot() + 
-  geom_line(aes(Date, value_sa)) +
-  facet_wrap(~ticker, scales = "free_y") + theme_bw()+ 
+  geom_line(aes(Date, value_sa), color = "steelblue") +
+  # facet_wrap(~ticker, scales = "free_y") + 
+  ggthemes::theme_economist() + 
+  ggthemes::scale_color_economist() #+ theme_bw()+ 
   labs(
-    x = "Date",
+    x = "",
     y = "",
-    colour = "Fruit",
+    #colour = "Fruit",
     title = "Fruit seasonally adjusted"
   ) +
   theme(
@@ -26,5 +28,4 @@ sa <- df %>%
   ) 
 
 ggsave("plots/plot_seasonally_adjusted.png", width = 8, height = 6)
-
 
