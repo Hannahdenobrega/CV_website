@@ -63,7 +63,7 @@ st.write("In the figure below it is clear that there is an upward trend in the d
 process1 = subprocess.Popen(["Rscript", "code/raw_data_plot.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result1 = process1.communicate()
 #image = Image.open('/Users/hannahdenobrega/Documents/FoP_bin/pages/plots/plot_nsa.png')
-image = Image.open('plots/plot_nsa.png')
+image = Image.open('../plots/plot_nsa.png')
 st.image(image)
 st.caption('**Figure 1:** Raw data - not seasonally adjusted')
 
