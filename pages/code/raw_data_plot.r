@@ -4,7 +4,7 @@ library(pacman)
 pacman::p_load(tidyverse, ggplot2, readr)
 
 #setwd('/Users/hannahdenobrega/Documents/FoP_bin/pages')
-setwd("../pages")
+setwd("./pages")
 
 df <- read_csv("data/seasonal_data.csv")
 

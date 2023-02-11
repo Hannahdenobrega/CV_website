@@ -63,7 +63,7 @@ st.write("In the figure below it is clear that there is an upward trend in the d
 process1 = subprocess.Popen(["Rscript", "code/raw_data_plot.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result1 = process1.communicate()
 #image = Image.open('/Users/hannahdenobrega/Documents/FoP_bin/pages/plots/plot_nsa.png')
-image = Image.open('../plots/plot_nsa.png')
+image = Image.open('pages/plots/plot_nsa.png')
 st.image(image)
 st.caption('**Figure 1:** Raw data - not seasonally adjusted')
 
@@ -86,7 +86,8 @@ seasonal~factor = \frac{value}{annualised~average}{12}
 
 process3 = subprocess.Popen(["Rscript", "code/seasonal_factort.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result3 = process3.communicate()
-image = Image.open('/Users/hannahdenobrega/Documents/FoP_bin/pages/plots/seasonal_factor.png')
+#image = Image.open('/Users/hannahdenobrega/Documents/FoP_bin/pages/plots/seasonal_factor.png')
+image = Image.open('pages/plots/seasonal_factor.png')
 st.image(image)
 st.caption('**Figure 2:** Seasonal factor')
 
@@ -101,7 +102,8 @@ seasonally~adjusted~value = \frac{value}{seasonal~factor}12
 
 process4 = subprocess.Popen(["Rscript", "code/seasonally_adjusted.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result4 = process4.communicate()
-image = Image.open('/Users/hannahdenobrega/Documents/FoP_bin/pages/plots/plot_seasonally_adjusted.png')
+#image = Image.open('/Users/hannahdenobrega/Documents/FoP_bin/pages/plots/plot_seasonally_adjusted.png')
+image = Image.open('pages/plots/plot_seasonally_adjusted.png')
 st.image(image)
 st.caption('**Figure 3:** Fruit, seasonally adjusted')
 

@@ -1,7 +1,8 @@
 library(tidyverse);library(lubridate)
 
 #setwd('/Users/hannahdenobrega/Documents/FoP_bin/pages')
-setwd("../pages")
+setwd("./pages")
+#setwd(..)
 
 Jalshtr <- 
   # First, make the return series monthly:

@@ -15,7 +15,7 @@ In the figure below I illustrate the staggering impact that different scales of 
 process1 = subprocess.Popen(["Rscript", "code/tyranny_of_fees.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result1 = process1.communicate()
 #image = Image.open('/Users/hannahdenobrega/Documents/FoP_bin/pages/plots/plot_tyranny_of_fees.png')
-image = Image.open('../plots/plot_tyranny_of_fees.png')
+image = Image.open('pages/plots/plot_tyranny_of_fees.png')
 st.image(image)
 st.caption('''
 **Source:** Bloomberg
