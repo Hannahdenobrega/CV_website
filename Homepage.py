@@ -3,7 +3,7 @@ import streamlit as st, pandas as pd, numpy as np
 import base64 # for gif 
 from PIL import Image
 
-
+#git push origin HEAD:master
 
 
 # --- PATH SETTINGS ---
@@ -186,7 +186,7 @@ st.write(
 
 # --- JOB5
 st.write("#")
-st.write("🖱️", "**Manager | Hanks**")
+st.write("🖱️", "**General manager | Hanks**")
 st.write("Stellenbosch: 2019/02 - 2020/02")
 st.write(
         """
